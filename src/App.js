@@ -4,12 +4,11 @@ import './App.css';
 import Navbar from './Components/Header/navBar';
 import Banner from './Components/Banner/banner';
 import Career from './Components/Career/career';
-import Others from './Components/Others/others';
+import Others from './Components/Others/others'; // Import the Others component
 import AutoPlay from './Components/Carousel/carousel';
 import StickyIcons from './Components/Sticky/sticky';
 import Students from './Components/Students/students';
 import Trainings from './Components/Trainings/trainings';
-
 import Trainees from './Components/Trainees/trainees';
 import Footer from './Components/Footer/footer';
 import Credentials from './Components/credentials/credentials';
@@ -20,7 +19,6 @@ import JavaFs from './Components/FED/javaFs';
 import Mobile from './Components/FED/mobile';
 import Aws from './Components/FED/aws';
 import Digital from './Components/FED/digital';
-import DataScientist from './Components/FED/ds';
 import DataScientists from './Components/FED/ds';
 import Dataanalyst from './Components/FED/da';
 import Software from './Components/FED/st';
@@ -47,7 +45,6 @@ function App() {
               <Career />
               <Others />
               <AutoPlay />
-           
               <Students />
               <Trainings />
               <Credentials />
@@ -55,6 +52,8 @@ function App() {
               <StickyIcons />
             </>
           } />
+
+          <Route path="/vts-process" element={<Others />} /> {/* Route for VTS PROCESS */}
 
           <Route path="/training-details/1" element={<Mern />} />
           <Route path="/training-details/2" element={<Fed />} />
@@ -75,10 +74,6 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/placement" element={<Placements />} />
           <Route path="/VISplace" element={<VisPlacement />} />
-
-
-
-
         </Routes>
 
         <Footer />
