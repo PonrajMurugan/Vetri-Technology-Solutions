@@ -1,0 +1,130 @@
+.fonts-head {
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.fonts-head::after {
+    content: '';
+    display: block;
+    height: 4px; 
+    margin-top: 10px;
+    background-color: orange;
+
+    border-radius: 5px; 
+    width: 13%; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.trainings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+    padding: 20px;
+    padding-bottom: 50px;
+   
+}
+
+
+
+.training-item {
+    flex: 1 1 calc(20% - 15px);
+    max-width: 20%;
+    box-sizing: border-box;
+    perspective: 1000px;
+}
+.training-item:hover {
+    cursor: pointer; 
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    transition: transform 0.4s ease;
+}
+
+.flip-card h6 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: navy;
+}
+
+.view-details {
+    background-color: white;
+    color: orange;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-details:hover {
+    background-color: navy;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .training-item {
+        flex: 1 1 calc(33.33% - 15px);
+        max-width: calc(33.33% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .training-item {
+        flex: 1 1 calc(100% - 15px);
+        max-width: 100%;
+    }
+}

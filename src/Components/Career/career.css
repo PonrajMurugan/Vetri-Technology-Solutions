@@ -1,0 +1,120 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.heading {
+    font-size: 2.5rem;
+
+    color: orange; 
+    position: relative;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    display: inline-block;
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+
+
+.heading::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #007bff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.heading::after {
+    width: 30%;
+    background-color: #ff4500;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 600px;
+}
+
+.content h6 {
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+    color: navy;
+    margin-bottom: 10px;
+    font-family: "Holtwood One SC", serif;
+    font-weight:400;
+    font-style: normal;
+}
+
+.content p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: "Agdasima", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    color: black;
+}
+.content p i {
+    color: #007bff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .content {
+        font-size: 0.9rem;
+    }
+}

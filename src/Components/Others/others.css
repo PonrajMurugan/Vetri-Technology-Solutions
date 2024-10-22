@@ -1,0 +1,119 @@
+.others-container {
+    padding: 20px;
+    text-align: center;
+    margin-top:45px ;
+    margin-bottom: 45px;
+}
+
+
+.others-heading h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    text-transform: uppercase;
+    background-color: navy;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+    position: relative;
+}
+
+.others-heading h1 span {
+    color: orange; 
+    -webkit-background-clip: unset; 
+    -webkit-text-fill-color: orange; 
+}
+
+
+
+.others-heading h1::after {
+    content: '';
+    display: block;
+    height: 4px; 
+    margin-top: 10px;
+    background-color: orange;
+
+    border-radius: 5px; 
+    width: 20%; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.others-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+   
+  
+  
+ 
+}
+
+.others-item {
+    flex: 1 1 calc(25% - 40px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    border-radius: 200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+   
+}
+
+.others-item img {
+    width: 150px;
+    /* height: 100px; */
+    /* object-fit: cover; */
+    margin-bottom: 15px;
+  
+}
+
+.others-item p {
+    font-size: 1.2rem;
+    /* font-weight: 500; */
+    color: rgb(6, 6, 199);
+    font-family: "Agdasima", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.others-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.others-item:hover p {
+    color: rgb(255, 170, 0);
+}
+
+@media (max-width: 1024px) {
+    .others-item {
+        flex: 1 1 calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .others-item {
+        flex: 1 1 calc(100% - 40px);
+    }
+
+    .others-heading h1 {
+        font-size: 2rem;
+    }
+
+    .others-item p {
+        font-size: 1rem;
+    }
+}

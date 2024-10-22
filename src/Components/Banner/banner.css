@@ -1,0 +1,9 @@
+.ban-img img{
+    height:80vh;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+}
+
+.banner-whole{
+    margin:115px 0;
+}

@@ -1,0 +1,130 @@
+.mern-container {
+    padding: 50px 20px;
+    background-color: #f0f0f5;
+
+    color: #333;
+    max-width: 1200px;
+    margin: 25px auto;
+  }
+  
+  .mern-container h1 {
+    font-size: 42px;
+    color: #1e3d59;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    font-family: "Prociono", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .mern-container p {
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+  }
+  
+  .mern-flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .mern-flexbox-item {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .mern-flexbox-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  
+  .mern-flexbox-item h1 {
+    font-size: 24px;
+    color: #f76c6c;
+    margin-bottom: 15px;
+  }
+  
+  .mern-flexbox-item p {
+    font-size: 16px;
+    color: black;
+  }
+  
+  .mern-icon {
+    font-size: 60px; 
+    color: #f76c6c; 
+    margin-bottom: 15px;
+  }
+  
+  .mern-image-container {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .mern-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* .mern-image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  } */
+  
+  @media (max-width: 992px) {
+    .mern-flexbox {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mern-container h1 {
+      font-size: 36px;
+    }
+  
+    .mern-flexbox {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mern-flexbox-item {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .mern-container h1 {
+      font-size: 28px;
+    }
+  
+    .mern-container p {
+      font-size: 16px;
+    }
+  }
+  
+
