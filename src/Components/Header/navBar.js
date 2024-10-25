@@ -6,7 +6,7 @@ import logo from '../Vetri Technology Solutions_files/vetrilogo.8f5df87fe97371e0
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMegaMenuOpen, setMegaMenuOpen] = useState(false);
-  const megaMenuRef = useRef(null); // Create a reference for the mega menu
+  const megaMenuRef = useRef(null); 
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -16,12 +16,13 @@ const Navbar = () => {
     setMegaMenuOpen(!isMegaMenuOpen);
   };
 
-  const handleLinkClick = (event) => {
-    event.preventDefault();
-    setMegaMenuOpen(false);
-  };
+  // const handleLinkClick = (event) => {
+  //   event.preventDefault();
+  //   setMegaMenuOpen(false);
+  // };
 
   const handleLogoClick = () => {
+    setMegaMenuOpen(false);
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -56,11 +57,12 @@ const Navbar = () => {
           </div>
 
           <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-            <li className="nav-item">
-              <Link to="/" className="nav-link" onClick={handleLinkClick}>
-                VTS PROCESS
-              </Link>
-            </li>
+          <li className="nav-item">
+            <a href="#raj" className="nav-link">
+              VTS PROCESS
+            </a>
+          </li>
+
             <li className="nav-item" ref={megaMenuRef}> 
               <span className="nav-link dropdown-toggle" onClick={toggleMegaMenu}>
                 OUR TRAININGS

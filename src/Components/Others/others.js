@@ -12,7 +12,7 @@ import job7 from '../Vetri Technology Solutions_files/certification_approval.574
 
 const Others = () => {
     return (
-        <div className='others-container container'>
+        <div className='others-container container' id='raj'>
             <div className='others-heading'>
                 <h1  data-aos="fade-right">How <span style={{color:"orange"}}>VTS </span> Is Different From <span  style={{color:"orange"}}>Others ???</span> </h1>
             </div>
